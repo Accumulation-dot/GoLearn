@@ -1,14 +1,18 @@
 package database
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+)
 
-func MysqlConfig()  {
+func MysqlConfig() (db *gorm.DB, err error)  {
+	db, err = gorm.Open("mysql", "developer:ZXcV1357@$^*@/golang_gorm?charaset=utf8md4&parseTime=True&loc=Local")
+	return
+}
 
-	db, err := gorm.Open("mysql", "developer:ZXcV1357@$^*@/golang_gorm?charaset=utf8md4&parseTime=True&loc=Local")
+func PostgreSQLCOnfig() (db *gorm.DB, err error)  {
+	db, err = gorm.Open("postgres", "host=myhost port=myport user=gorm dbname=gorm password=mypassword")
 
-	if err != nil {
-
-	}
-
-	defer db.Close()
+	return
 }
