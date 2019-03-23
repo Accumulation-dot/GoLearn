@@ -6,7 +6,9 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
-func MysqlConfig() (db *gorm.DB, err error)  {
+func MysqlConfig() (db *gorm.DB, err error) {
+	// db remote @tcp(ip:3306/database)?
+	// local @/database?
 	db, err = gorm.Open("mysql", "developer:ZXcV1357@$^*@/golang_gorm?charaset=utf8md4&parseTime=True&loc=Local")
 	return
 }

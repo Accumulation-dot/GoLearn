@@ -3,13 +3,10 @@ package models
 import "github.com/jinzhu/gorm"
 
 const (
-	MenuCodeLast = "history"
-	MenuCodeSlot = "slot"
-	MenuCodeCheese = "cheese"
-	MenuCodeReal = "real"
-	MenuCodeFishing = "fishing"
-	MenuCodeSports = "sports"
-	MenuCodeLottery = "lottery"
+	HMCodeInfo = "info"
+
+
+
 )
 
 type HMCode string

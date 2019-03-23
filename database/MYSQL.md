@@ -12,12 +12,12 @@ sudo mysql
 
 mysql -u root -p
 
+ 
+sudo mysql
+mysql > grant all privileges  on *.* to developer@'%' identified by "ZXcV1357@$^*";
 
-create 
-
-
-
-grant all privileges  on *.* to developer@'%' identified by "ZXcV1357@$^*";
-
-FLUSH PRIVILEGES;
+mysql > FLUSH PRIVILEGES;
 ```
+
+### mysql 设置远程访问
+
